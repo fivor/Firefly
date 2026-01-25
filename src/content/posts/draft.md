@@ -1,9 +1,13 @@
 ---
-title: 草稿示例
-published: 1970-01-01
-tags: [Markdown, 博客, 演示]
-category: 文章示例
-draft: true
+title: 从2026开始出发
+published: 2026-01-25
+pinned: true
+description: 我的第一篇Blog
+tags: [Markdown, 博客]
+category: 文章
+auther: Fivor
+draft: false
+date: 2026-01-25
 ---
 
 # 这篇文章是草稿

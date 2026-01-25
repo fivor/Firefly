@@ -12,7 +12,7 @@ export const sponsorConfig: SponsorConfig = {
 		"您的赞助将用于服务器维护、内容创作和功能开发，帮助我持续提供优质内容。",
 
 	// 是否显示赞助者列表
-	showSponsorsList: true,
+	showSponsorsList: false,
 
 	// 是否在文章详情页底部显示赞助按钮
 	showButtonInPost: true,
@@ -23,7 +23,7 @@ export const sponsorConfig: SponsorConfig = {
 			name: "支付宝",
 			icon: "fa6-brands:alipay",
 			// 收款码图片路径（需要放在 public 目录下）
-			qrCode: "/assets/images/sponsor/alipay.png",
+			qrCode: "/assets/images/sponsor/alipay.jpg",
 			link: "",
 			description: "使用 支付宝 扫码赞助",
 			enabled: true,
@@ -31,7 +31,7 @@ export const sponsorConfig: SponsorConfig = {
 		{
 			name: "微信",
 			icon: "fa6-brands:weixin",
-			qrCode: "/assets/images/sponsor/wechat.png",
+			qrCode: "/assets/images/sponsor/wechat.jpg",
 			link: "",
 			description: "使用 微信 扫码赞助",
 			enabled: true,
@@ -41,8 +41,8 @@ export const sponsorConfig: SponsorConfig = {
 			icon: "simple-icons:kofi",
 			qrCode: "",
 			link: "https://ko-fi.com/cuteleaf",
-			description: "Buy a Coffee for Firefly",
-			enabled: true,
+			description: "Buy a Coffee for Fivor",
+			enabled: false,
 		},
 		{
 			name: "爱发电",
@@ -50,7 +50,7 @@ export const sponsorConfig: SponsorConfig = {
 			qrCode: "",
 			link: "https://afdian.com/a/cuteleaf",
 			description: "通过 爱发电 进行赞助",
-			enabled: true,
+			enabled: false,
 		},
 	],
 
