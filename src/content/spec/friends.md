@@ -13,7 +13,7 @@ description: "与优秀的朋友们一起成长"
 站点名称: Fivor
 站点描述: 代码与文字，探索生活。
 站点链接: https://blog-fivor.vercel.app
-头像链接: https://im.fivor.cc/file/1769309708843_头像-新.webp
+头像链接: https://im.fivor.cc/file/1769316047436_avatar.webp
 
 ```
 
