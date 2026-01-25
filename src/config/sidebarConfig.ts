@@ -38,9 +38,9 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件类型：公告组件
 			type: "announcement",
 			// 是否启用该组件
-			enable: true,
+			enable: false,
 			// 组件显示顺序
-			order: 2,
+			order: 5,
 			// 组件位置
 			position: "top",
 			// CSS 类名
@@ -92,7 +92,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 是否启用该组件
 			enable: true,
 			// 组件显示顺序
-			order: 5,
+			order: 2,
 			// 组件位置
 			position: "sticky",
 			// CSS 类名
