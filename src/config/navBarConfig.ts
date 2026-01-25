@@ -38,6 +38,12 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 				external: true,
 				icon: "fa6-brands:bilibili",
 			},
+			{
+				name: "图床",
+				url: "https://im.fivor.cc/",
+				external: true,
+				icon: "fa6-brands:microblog",
+			},
 		],
 	});
 

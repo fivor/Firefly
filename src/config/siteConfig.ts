@@ -21,7 +21,7 @@ export const siteConfig: SiteConfig = {
 
 	// 站点关键词
 	keywords: [
-		"Firefly",
+		"软件",
 		"Fivor",
 		"Astro",
 		"图床",
@@ -50,7 +50,7 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		{
 			// 图标文件路径
-			src: "/assets/images/nav.webp",
+			src: "/assets/images/nav.png",
 			// 可选，指定主题 'light' | 'dark'
 			// theme: "light",
 			// 可选，图标大小
@@ -63,11 +63,11 @@ export const siteConfig: SiteConfig = {
 		// 导航栏Logo
 		// 支持三种类型：Astro图标库，本地图片，网络图片
 		// { type: "icon", value: "material-symbols:home-pin-outline" }
-		// { type: "image", value: "/assets/images/logo.webp", alt: "Firefly Logo" }
+		// { type: "image", value: "/assets/images/logo.png", alt: "Firefly Logo" }
 		// { type: "image", value: "https://example.com/logo.png", alt: "Firefly Logo" }
 		logo: {
 			type: "image",
-			value: "/assets/images/nav.webp",
+			value: "/assets/images/nav.png",
 			alt: "🌟",
 		},
 		// 导航栏标题

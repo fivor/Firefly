@@ -1,5 +1,5 @@
 ---
-title: SuperGit：GitHub国内加速助手
+title: SuperGit——GitHub国内加速助手
 published: 2026-01-24
 pinned: false
 description: 专为国内开发者设计的浏览器扩展插件，旨在解决GitHub访问缓慢、图片加载失败和文件下载缓慢等问题.
