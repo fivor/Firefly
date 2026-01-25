@@ -7,6 +7,7 @@ import KatexManager from "@components/features/KatexManager.astro";
 import MusicPlayer from "@components/features/MusicPlayer.astro";
 import SakuraEffect from "@components/features/SakuraEffect.astro";
 import ConfigCarrier from "@components/layout/ConfigCarrier.astro";
+import Analytics from "@vercel/analytics/astro";
 
 import {
 	backgroundWallpaper,
@@ -101,6 +102,7 @@ const bannerOffset = `${BANNER_HEIGHT_EXTEND / 2}vh`;
       {siteConfig.analytics?.microsoftClarityId && (
               <MicrosoftClarity clarityId={siteConfig.analytics.microsoftClarityId} />
       )}
+      <Analytics />
 
     <title>{pageTitle}</title>
 
@@ -317,7 +319,7 @@ const bannerOffset = `${BANNER_HEIGHT_EXTEND / 2}vh`;
               overlayWallpaper.classList.add("opacity-100");
             }
           } else if (wallpaperMode === WALLPAPER_NONE) {
-            // 纯色背景：隐藏所有壁纸
+            // 纯色��景：隐藏所有壁纸
             if (bannerWrapper) {
               bannerWrapper.style.display = "none";
             }
