@@ -8,6 +8,7 @@ category: 文章
 auther: Fivor
 draft: false
 date: 2026-01-25
+image: https://im.fivor.cc/file/1768656827423_2153816066315255808.heic
 ---
 
 # 这篇文章是草稿
