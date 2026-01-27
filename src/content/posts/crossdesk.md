@@ -8,7 +8,7 @@ category: 软件
 auther: Fivor
 draft: false
 date: 2026-01-25
-image: "https://im.fivor.cc/file/1769343752922_33.webp"
+image: "https://im.fivor.cc/file/wx/1769343752922_33.webp"
 ---
 
 ## 简介

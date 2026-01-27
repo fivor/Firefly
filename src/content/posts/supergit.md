@@ -8,7 +8,7 @@ category: 软件
 auther: Fivor
 draft: false
 date: 2026-01-24
-image: "https://im.fivor.cc/file/1769345025368_22_21.45.42.webp"
+image: "https://im.fivor.cc/file/wx/1769345025368_22_21.45.42.webp"
 ---
 
 最近分享了很多Github上面实用的开源项目，但是因为某些原因，正常打开Github或者下载文件都会很慢，甚至打不开。最近就发现一款专为国内开发者设计的浏览器扩展插件——**SuperGit**，旨在解决GitHub访问缓慢、图片加载失败和文件下载缓慢等问题。能够自动将所有GitHub及资源请求重定向到高速的镜像站，从而可以快速打开Github页面。而且在右击下载文件时，可以选择多个高速镜像节点进行加速，尤其适合大型仓库和文件的下载。
