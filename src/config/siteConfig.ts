@@ -16,8 +16,7 @@ export const siteConfig: SiteConfig = {
 	site_url: "https://fivor.de",
 
 	// 站点描述
-	description:
-		"Fivor打算长期持有的博客网站。",
+	description: "Fivor打算长期持有的博客网站。",
 
 	// 站点关键词
 	keywords: [
