@@ -12,7 +12,7 @@ export const sponsorConfig: SponsorConfig = {
 		"您的赞助将用于服务器维护、内容创作和功能开发，帮助我持续提供优质内容。",
 
 	// 是否显示赞助者列表
-	showSponsorsList: false,
+	showSponsorsList: true,
 
 	// 是否在文章详情页底部显示赞助按钮
 	showButtonInPost: true,
@@ -58,17 +58,17 @@ export const sponsorConfig: SponsorConfig = {
 	sponsors: [
 		// 示例：已实名赞助者
 		{
-			name: "夏叶",
-			amount: "¥50",
-			date: "2025-10-01",
+			name: "Fivor",
+			amount: "¥666",
+			date: "2026-01-01",
 			message: "感谢分享！",
 		},
 
 		// 示例：匿名赞助者
 		{
 			name: "匿名用户",
-			amount: "¥20",
-			date: "2025-10-01",
+			amount: "¥1",
+			date: "2026-01-01",
 		},
 	],
 };
