@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "Fivor",
 
 	// 个人签名
-	bio: "Hello, I'm Fivor.",
+	bio: "一名热爱分享的小白",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
@@ -22,9 +22,9 @@ export const profileConfig: ProfileConfig = {
 	// showName: true 时显示图标和名称，false 时只显示图标
 	links: [
 		{
-			name: "Bilibli",
+			name: "2hu",
 			icon: "fa7-brands:bilibili",
-			url: "https://space.bilibili.com/9888657",
+			url: "https://2hu.io",
 			showName: false,
 		},
 		{

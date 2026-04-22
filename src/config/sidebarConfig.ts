@@ -45,12 +45,26 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			showOnPostPage: true,
 		},
 		{
+			// 组件类型：广告栏组件 1
+			type: "advertisement",
+			// 是否启用该组件
+			enable: true,
+			// 组件显示顺序
+			// order: 2,
+			// 组件位置
+			position: "sticky",
+			// 是否在文章详情页显示
+			showOnPostPage: true,
+			// 配置ID：使用第一个广告配置
+			configId: "ad1",
+		},
+		{
 			// 组件类型：公告组件
 			type: "announcement",
 			// 是否启用该组件
 			enable: false,
 			// 组件显示顺序
-			order: 5,
+			// order: 5,
 			// 组件位置
 			position: "top",
 			// 是否在文章详情页显示
@@ -60,11 +74,11 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件类型：音乐播放器
 			type: "music",
 			// 是否启用该组件
-			enable: true,
+			enable: false,
 			// 组件位置
 			position: "sticky",
 			// 是否在文章详情页显示
-			showOnPostPage: true,
+			showOnPostPage: false,
 		},
 		{
 			// 组件类型：分类组件
@@ -96,20 +110,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 				collapseThreshold: 10,
 			},
 		},
-		{
-			// 组件类型：广告栏组件 1
-			type: "advertisement",
-			// 是否启用该组件
-			enable: true,
-			// 组件显示顺序
-			order: 2,
-			// 组件位置
-			position: "sticky",
-			// 是否在文章详情页显示
-			showOnPostPage: true,
-			// 配置ID：使用第一个广告配置
-			configId: "ad1",
-		},
+		
 	],
 
 	// 右侧边栏组件配置列表
