@@ -23,19 +23,19 @@ export const profileConfig: ProfileConfig = {
 	links: [
 		{
 			name: "Bilibli",
-			icon: "fa6-brands:bilibili",
+			icon: "fa7-brands:bilibili",
 			url: "https://space.bilibili.com/9888657",
 			showName: false,
 		},
 		{
 			name: "GitHub",
-			icon: "fa6-brands:github",
+			icon: "fa7-brands:github",
 			url: "https://github.com/fivor",
 			showName: false,
 		},
 		{
 			name: "Email",
-			icon: "fa6-solid:envelope",
+			icon: "fa7-solid:envelope",
 			url: "mailto:i@fivor.cc",
 			showName: false,
 		},

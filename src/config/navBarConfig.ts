@@ -30,19 +30,19 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 				name: "GitHub",
 				url: "https://github.com/fivor/Firefly",
 				external: true,
-				icon: "fa6-brands:github",
+				icon: "fa7-brands:github",
 			},
 			{
 				name: "Bilibili",
 				url: "https://space.bilibili.com/9888657",
 				external: true,
-				icon: "fa6-brands:bilibili",
+				icon: "fa7-brands:bilibili",
 			},
 			{
 				name: "图床",
 				url: "https://im.fivor.cc/",
 				external: true,
-				icon: "fa6-brands:microblog",
+				icon: "fa7-brands:microblog",
 			},
 		],
 	});
