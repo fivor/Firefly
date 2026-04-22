@@ -28,7 +28,7 @@ image: ./images/firefly2.webp
 
 ::github{repo="saicaca/fuwari"}
 
-![Firefly](./images/1.webp)
+![Firefly](./images/1.avif)
 
 
 ## 🚀 技术架构

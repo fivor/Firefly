@@ -19,12 +19,10 @@ const sidebarTocComponent = sidebarLayoutConfig.rightComponents?.find(
 );
 const isSidebarTocEnabled = sidebarTocComponent?.enable ?? false;
 const sidebarPosition = sidebarLayoutConfig.position;
-const showRightSidebarOnPostPage =
-	sidebarLayoutConfig.showRightSidebarOnPostPage;
 ---
 
 <!-- 悬浮TOC按钮 -->
-<div id="floating-toc-wrapper" class="floating-toc-wrapper" data-is-sidebar-toc-enabled={String(isSidebarTocEnabled)} data-sidebar-position={sidebarPosition} data-show-right-sidebar-on-post-page={String(showRightSidebarOnPostPage)}>
+<div id="floating-toc-wrapper" class="floating-toc-wrapper" data-is-sidebar-toc-enabled={String(isSidebarTocEnabled)} data-sidebar-position={sidebarPosition} data-show-both-sidebars-on-post={String(sidebarLayoutConfig.showBothSidebarsOnPostPage ?? false)}>
   <FloatingButton
     id="floating-toc-btn"
     icon="material-symbols:format-list-bulleted"
@@ -36,16 +34,16 @@ const showRightSidebarOnPostPage =
   <!-- 悬浮TOC面板 - 移到 Wrapper 内部以便相对定位 -->
   <div
     id="floating-toc-panel"
-    class="floating-toc-panel hide w-80 max-h-[24rem] overflow-hidden rounded-2xl shadow-2xl backdrop-blur-lg border border-white/20 bg-white/60 dark:bg-black/60 dark:border-white/10 md:w-80 w-[calc(100vw-2rem)] md:max-h-[24rem] max-h-[calc(100vh-8rem)]"
+    class="floating-toc-panel hide w-80 max-h-96 overflow-hidden rounded-2xl shadow-2xl backdrop-blur-lg border border-white/20 bg-white/60 dark:bg-black/60 dark:border-white/10 md:w-80 w-[calc(100vw-2rem)] md:max-h-96 max-h-[calc(100vh-8rem)]"
     style="background-color: rgba(var(--card-bg-rgb, 255, 255, 255), 0.6);"
     >
     <div
-        class="p-4 border-b border-gray-200 dark:border-gray-700 sticky top-0 backdrop-blur-sm z-10"
+        class="p-4 border-b border-gray-200 dark:border-gray-700 sticky top-0 backdrop-blur-xs z-10"
         style="background-color: rgba(var(--card-bg-rgb, 255, 255, 255), 0.6);"
     >
         <div class="flex items-center justify-between">
         <h3
-            class="text-lg font-bold text-[var(--primary)] flex items-center gap-2"
+            class="text-lg font-bold text-(--primary) flex items-center gap-2"
         >
             {i18n(I18nKey.tableOfContents)}
         </h3>
@@ -138,7 +136,7 @@ const showRightSidebarOnPostPage =
 </style>
 
 <script>
-  import { TOCManager, isPostPage } from "@/utils/tocUtils";
+  import { TOCManager, isPostPage } from "@/utils/toc-utils";
 
   // 从 data 属性读取配置
   const wrapper = document.querySelector('.floating-toc-wrapper');
@@ -239,26 +237,19 @@ const showRightSidebarOnPostPage =
       return false;
     }
 
-    // 获取侧边栏位置配置
     const wrapper = document.querySelector('.floating-toc-wrapper');
-    let sidebarPosition = wrapper?.getAttribute('data-sidebar-position') || 'left';
-    const showRightSidebarOnPostPage = wrapper?.getAttribute('data-show-right-sidebar-on-post-page') === 'true';
+    const sidebarPosition = wrapper?.getAttribute('data-sidebar-position') || 'left';
+    const showBothSidebarsOnPost = wrapper?.getAttribute('data-show-both-sidebars-on-post') === 'true';
 
-    // 如果配置了在文章详情页显示右侧边栏，且当前是文章详情页，则视为双侧边栏模式
-    if (sidebarPosition === 'left' && showRightSidebarOnPostPage) {
-        sidebarPosition = 'both';
+    // 双侧边栏模式（含文章页临时双侧栏）：小屏幕或侧边栏目录未启用时显示悬浮目录
+    const effectiveIsBothSidebars = sidebarPosition === 'both' || showBothSidebarsOnPost;
+    if (effectiveIsBothSidebars) {
+      const isSmallScreen = window.innerWidth < 1280;
+      return isSmallScreen || !isSidebarTocEnabled;
     }
 
-    // 如果是单侧边栏模式（左侧），则始终显示悬浮目录（因为右侧边栏不存在）
-    if (sidebarPosition === 'left') {
-        return true;
-    }
-    
-    // 检查屏幕宽度
-    const isSmallScreen = window.innerWidth < 1200;
-    
-    // 显示条件：网格模式 OR 小屏幕 OR 侧边栏目录未启用
-    return  isSmallScreen || !isSidebarTocEnabled;
+    // 单侧边栏模式（left或right），对侧没有侧边栏目录，始终显示悬浮目录
+    return true;
   }
 
   // 更新悬浮目录的显示状态
@@ -348,6 +339,11 @@ const showRightSidebarOnPostPage =
     // 监听布局模式切换（通过自定义事件）
     window.addEventListener('layoutChange', () => {
       updateFloatingTOCVisibility();
+    });
+
+    // 密码解密后重新初始化 TOC
+    document.addEventListener("password:decrypted", () => {
+      setTimeout(initFloatingTOC, 200);
     });
 
     // 监听窗口大小变化

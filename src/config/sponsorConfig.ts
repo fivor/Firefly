@@ -14,6 +14,9 @@ export const sponsorConfig: SponsorConfig = {
 	// 是否显示赞助者列表
 	showSponsorsList: true,
 
+	// 是否显示评论区，需要先在commentConfig.ts启用评论系统
+	showComment: true,
+
 	// 是否在文章详情页底部显示赞助按钮
 	showButtonInPost: true,
 
@@ -21,7 +24,7 @@ export const sponsorConfig: SponsorConfig = {
 	methods: [
 		{
 			name: "支付宝",
-			icon: "fa6-brands:alipay",
+			icon: "fa7-brands:alipay",
 			// 收款码图片路径（需要放在 public 目录下）
 			qrCode: "/assets/images/sponsor/alipay.jpg",
 			link: "",
@@ -48,7 +51,7 @@ export const sponsorConfig: SponsorConfig = {
 			name: "爱发电",
 			icon: "simple-icons:afdian",
 			qrCode: "",
-			link: "https://afdian.com/a/cuteleaf",
+			link: "https://ifdian.net/a/cuteleaf",
 			description: "通过 爱发电 进行赞助",
 			enabled: false,
 		},
