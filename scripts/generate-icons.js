@@ -32,7 +32,7 @@ const iconSetCache = new Map();
 /**
  * 递归获取目录下所有文件
  */
-function getAllFiles(dir, extensions = [".svelte"]) {
+function getAllFiles(dir, extensions = [".svelte", ".astro"]) {
 	const files = [];
 
 	function walk(currentDir) {
@@ -72,12 +72,16 @@ function extractIconNames(content) {
 		/getIconSvg\(["']([a-z0-9-]+:[a-z0-9-]+)["']\)/gi,
 		// hasIcon("xxx:yyy")
 		/hasIcon\(["']([a-z0-9-]+:[a-z0-9-]+)["']\)/gi,
+		// 三元运算符中的图标: ? "xxx:yyy" : "xxx:zzz"
+		/\?\s*["']([a-z0-9-]+:[a-z0-9-]+)["']\s*:\s*["']([a-z0-9-]+:[a-z0-9-]+)["']/gi,
 	];
 
 	for (const pattern of patterns) {
 		let match;
 		while ((match = pattern.exec(content)) !== null) {
-			icons.add(match[1]);
+			// 对于三元运算符模式，会有两个捕获组
+			if (match[1]) icons.add(match[1]);
+			if (match[2]) icons.add(match[2]);
 		}
 	}
 
