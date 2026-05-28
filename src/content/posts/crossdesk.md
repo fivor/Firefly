@@ -5,7 +5,7 @@ pinned: false
 description: CrossDesk 是一个轻量级的跨平台远程桌面软件，还支持 Web 端控制远程设备。
 tags: [远程控制, crossdesk]
 category: 软件
-auther: Fivor
+author: Fivor
 draft: false
 date: 2026-01-25
 image: "https://im.fivor.cc/file/wx/1769343752922_33.webp"

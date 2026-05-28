@@ -5,7 +5,7 @@ pinned: false
 description: 一个基于 Cloudflare R2 + Workers + React 构建的现代化、高性能、Serverless 个人相册系统。
 tags: [TRAE, AI, Github]
 category: 文章
-auther: Fivor
+author: Fivor
 draft: false
 date: 2026-02-01
 image: "https://img.fivor.cc/2026-02-01/95260f33-0fee-433b-92c7-ef43f16e25e2.png"

@@ -5,7 +5,7 @@ pinned: false
 description: 专为国内开发者设计的浏览器扩展插件，旨在解决GitHub访问缓慢、图片加载失败和文件下载缓慢等问题.
 tags: [插件, Github]
 category: 软件
-auther: Fivor
+author: Fivor
 draft: false
 date: 2026-01-24
 image: "https://im.fivor.cc/file/wx/1769345025368_22_21.45.42.webp"
