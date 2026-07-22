@@ -24,6 +24,7 @@ const ICON_SETS = {
 	mdi: "@iconify-json/mdi",
 	"simple-icons": "@iconify-json/simple-icons",
 	"svg-spinners": "@iconify-json/svg-spinners",
+	mingcute: "@iconify-json/mingcute",
 };
 
 // 图标集数据缓存
